@@ -90,34 +90,120 @@ const restaurant = {
         console.log(otherIngredients);
     }
 };
+// SPLIT AND JOIN
+console.log('a+very+nice+string'.split('+'));
+console.log('Pelumi Alonge'.split(' '));
 
-const question = new Map([
-    ['question', 'what is the best programming language in the world?'],
-    [1, 'C'],
-    [2, 'Java'],
-    [3, 'Javascript'],
-    ['correct', 3],
-    [true, 'Correct'],
-    [false, 'Try again!']
-]);
-console.log(question);
+const [firstName, lastName] = 'Pelumi Alonge'.split(' ');
 
-console.log(Object.entries(openingHours)); 
-const hoursMap = new Map(Object.entries(openingHours));
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ')
+console.log(newName)
 
-console.log(hoursMap);
 
-for (const [key, value] of question){
-    if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
-}
-// const answer = Number(prompt('Your answer'));
-const answer =3;
-console.log(answer);
+// // FIX CAPITALZATION IN NAME
+// const passenger = 'jONaS';
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice 
+// (1);
+// console.log(passengerCorrect);
 
-console.log(question.get(question.get('correct') === answer));
+// // COMPARING EMAILS
+// const email = 'hello@pelz.io';
+// const loginEmaail = '  Hello@Jonas.Io \n';
 
-// Convert maps to array
-console.log([...question]);
+// const lowerEmail = loginEmaail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// // console.log(trimmedEmail);
+
+// const normalizedEmail = loginEmaail.toLowerCase().trim();
+// console.log(normalizedEmail);
+// console.log(email === normalizedEmail);
+
+// // REPLACING STRINGS
+// const priceGB = '288,974#'
+// const priceUS = priceGB.replace('#', '$').replace(',', '.');
+// console.log(priceUS);
+
+// const announcement = 'All passengers come to boarding door 23. Boarding door 23!';
+// // console.log(announcement.replace('door', 'gate'));
+// console.log(announcement.replace(/door/g, 'gate'));
+
+// // METHODS THAT REPLACE BOOLEANS
+// const plane = 'A320';
+// console.log(plane.includes('A320'));
+// console.log(plane.startsWith('Air'));
+
+// if(plane.startsWith('Airbus') && plane.endsWith('neo')){
+//     console.log('Part of the NEW Airbus family');
+// }
+
+// const checkBaggage = function(items){
+//     const baggage = items.toLowerCase();
+//     if(baggage.includes('knife') || baggage.includes('gun')){
+//         console.log('You are NOT allowed on board');
+//     }else{
+//         console.log('welcome on Board');
+//     };
+// };
+// checkBaggage('I have a laptp, some Food and a pocket knife');
+// checkBaggage('Socks and camera');
+// checkBaggage('Got some snacks and a gun for protection');
+
+// // Football coding challenge
+// const gameEvents = new Map([
+//     [17, 'GOAL'],
+//     [36, 'Substitution'],
+//     [47, 'GOAL'],
+//     [61, 'Substitution'],
+//     [64, 'Yellow Card'],
+//     [69, 'Red Card'],
+//     [70, 'Substitution'],
+//     [72, 'Substitution'],
+//     [76, 'GOAL'],
+//     [80, 'GOAL'],
+//     [92, 'Yellow Card'],
+// ])
+
+// const events = [...new Set(gameEvents.values())];
+// gameEvents.delete(64);
+
+// console.log(`An event happened, on average, every ${90 / gameEvents.size} minutes`)
+
+// const time = [...gameEvents.keys()].pop();
+// console.log(time);
+
+// const half = min <= 45 ? 'FIRST' : 'SECOND'
+// for (const [min, event] of gameEvents){
+//     console.log(`[${half} HALF] ${min}: ${event}`)
+// }
+
+// const question = new Map([
+//     ['question', 'what is the best programming language in the world?'],
+//     [1, 'C'],
+//     [2, 'Java'],
+//     [3, 'Javascript'],
+//     ['correct', 3],
+//     [true, 'Correct'],
+//     [false, 'Try again!']
+// ]);
+// console.log(question);
+
+// console.log(Object.entries(openingHours)); 
+// const hoursMap = new Map(Object.entries(openingHours));
+
+// console.log(hoursMap);
+
+// for (const [key, value] of question){
+//     if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// }
+// // const answer = Number(prompt('Your answer'));
+// const answer =3;
+// console.log(answer);
+
+// console.log(question.get(question.get('correct') === answer));
+
+// // Convert maps to array
+// console.log([...question]);
 
 // Map Fundamentals
 
